@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AUTOMOMÓVILES</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/estilos.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="{% static 'main/js/inicializacion.js' %}"></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{% static 'main/img/automovillogo1.jpg' %}" alt="logo de la pagina">
+        <ul class="navegacion">
+            <li>
+                <!--para abrir enlace en otra pestaña target="_blank"-->
+                <a href="https://www.google.com.ec/" >Inicio</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.ec/">Historia</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.ec/">Galeria</a>
+            </li>
+            <li>
+                <a href="https://www.google.com.ec/">Contactos</a>
+            </li>
+        </ul>
+    </header>
+    <div class="landing">
+        <div class="slider">
+            <div>
+                <img title="Porsche 911 Turbo S 2021" class="imagen_landing" src="{% static 'main/img/automovil.png' %}" alt="imagen de un automovil">
+            </div>
+            <div>
+                <img title="Jeep Grand Cherokee SRT 2020" class="imagen_landing" src="{% static 'main/img/autoo2.png' %}" alt="imagen de un automovil">
+            </div>
+            <div>
+                <img class="imagen_landing" title="Ford Range 2021" src="{% static 'main/img/autoo3.png' %}" alt="imagen de un automovil">
+            </div>
+        </div>
+        <h2 class="eslogan">LOS MEJORES VEHÍCULOS DEL PAÍS</h2>
+
+        <ul class="redes_sociales">
+            <li><img src="{% static 'main/img/social-twitter.png' %}" alt="twitter"></li>
+            <li><img src="{% static 'main/img/socialfacebook.png' %}" alt="facebook"></li>
+            <li><img src="{% static 'main/img/social-inst.png' %}" alt="instagram"></li>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        {% block contenido %}
+        <p>
+            Un automóvil o coche, es un vehículo mecánico de propulsión propia destinado al transporte de personas, generalmente con cuatro ruedas y capacidad entre una y nueve plazas. Las ruedas "delanteras" pueden moverse hacia los lados para permitir giros y tomar las curvas.
+        
+            Se mueve gracias a un motor a explosión de combustión interna alimentado por gasolina, gas licuado del petróleo, gasóleo o aire comprimido.
+            
+        </p>
+        
+        
+        
+        {% endblock contenido %}        
+
+
+    </div>
+
+    <footer>
+        <br>
+        <br>
+        <br>
+        <h3 class="color_blanco centrar_texto">Creación de una aplicación con el framework Django
+        </h3>
+        <hr>
+        <h3 class="color_blanco centrar_texto">William Efrén Álvarez Carmona</h3>
+        <hr>
+        <h4 class="color_blanco centrar_texto">2021</h4>
+    </footer>
+</body>
+</html>
